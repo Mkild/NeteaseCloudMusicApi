@@ -46,3 +46,7 @@ jobs:
             # 运行
             - name: 运行
               run: npm run nohup
+            
+            # 退出
+            - name: 退出终端
+              run: exit
