@@ -46,4 +46,7 @@ jobs:
             # 运行
             - name: 运行
               run: nohup node app.js &
+
+            # 结束终端
+            - name: 结束终端
               run: exit
