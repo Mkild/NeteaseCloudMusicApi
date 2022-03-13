@@ -5,6 +5,8 @@
   "scripts": {
     "start": "node app.js",
     "nohup": "nohup node app.js &",
+    "forever": "forever start app.js",
+    "stop": "forever stopall",
     "test": "mocha -r intelli-espower-loader -t 20000 server.test.js main.test.js --exit",
     "lint": "eslint \"**/*.{js,ts}\"",
     "lint-fix": "eslint --fix \"**/*.{js,ts}\"",
