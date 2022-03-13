@@ -41,7 +41,7 @@ jobs:
                   # 用户
                   REMOTE_USER: 'root'
                   # 目标地址
-                  TARGET: '/www/wwwroot'
+                  TARGET: '/home/project/CloudMusicApi'
 
             # 运行
             - name: 运行
