@@ -45,7 +45,7 @@ jobs:
 
       # 关闭应用
       - name: 关闭应用
-        run: npm run stopall
+        run: npm run stop
 
       # 运行应用
       - name: 运行应用
