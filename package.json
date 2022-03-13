@@ -5,8 +5,6 @@
   "scripts": {
     "start": "node app.js",
     "nohup": "nohup node app.js &",
-    "forever": "forever restart app.js",
-    "stop": "forever stopall",
     "test": "mocha -r intelli-espower-loader -t 20000 server.test.js main.test.js --exit",
     "lint": "eslint \"**/*.{js,ts}\"",
     "lint-fix": "eslint --fix \"**/*.{js,ts}\"",
@@ -55,7 +53,6 @@
     "axios": "^0.24.0",
     "express": "^4.17.1",
     "express-fileupload": "^1.1.9",
-    "forever": "^4.0.3",
     "md5": "^2.3.0",
     "music-metadata": "^7.5.3",
     "pac-proxy-agent": "^5.0.0",
