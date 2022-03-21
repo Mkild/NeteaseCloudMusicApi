@@ -40,5 +40,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           # 用户
           REMOTE_USER: 'root'
-          # 目标地址
+          # 目标地址（目录）
           TARGET: '/home/project/CloudMusicApi'
