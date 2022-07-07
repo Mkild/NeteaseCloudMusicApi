@@ -8,8 +8,8 @@ module.exports = async (query, request) => {
   }
   const filename = query.songFile.name
     .replace('.' + ext, '')
-    .replaceAll(' ', '_')
-    .replaceAll('.', '_')
+    .replace(/\s/g, '')
+    .replace(/\./g, '_')
   query.cookie.os = 'pc'
   query.cookie.appver = '2.9.7'
   const bitrate = 999000
@@ -49,8 +49,12 @@ module.exports = async (query, request) => {
   let album = ''
   let songName = ''
   try {
-    const metadata = await mm.parseBuffer(query.songFile.data, 'audio/mpeg')
+    const metadata = await mm.parseBuffer(
+      query.songFile.data,
+      query.songFile.mimetype,
+    )
     const info = metadata.common
+
     if (info.title) {
       songName = info.title
     }
